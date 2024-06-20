@@ -1,6 +1,6 @@
 import requests
-import colorama
-import os 
+from colorama import Fore
+
 
 def ip_receive():
     try :
@@ -16,5 +16,14 @@ def ip_receive():
     except OSError :
         return " Not found"
     
+    
+data = ip_receive()
+    
+print(""" █   █ █▄█ ▄▀▄ ▀█▀ █ ▄▀▀ █▄ ▄█ ▀▄▀ █ █▀▄
+ ▀▄▀▄▀ █ █ █▀█  █  █ ▄██ █ ▀ █  █  █ █▀ 
+""")
 
-print(ip_receive())
+print(Fore.LIGHTBLACK_EX + """    Ip :""" , Fore.WHITE + data["IPv4"])
+print(Fore.LIGHTBLACK_EX + """    Country code :""" , Fore.WHITE + data["country_name"])
+print(Fore.LIGHTBLACK_EX + """    Latitude :""" , Fore.WHITE + str(data["latitude"]))
+print(Fore.LIGHTBLACK_EX + """    Longitude :""" , Fore.WHITE + str(data["longitude"]))
