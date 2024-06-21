@@ -12,7 +12,7 @@ before run this script , update whatismyip directory
 os.system("rm /bin/whatismyip")
 
 current_dir = input("Enter current directory :")
-script = ("cp whatismyip /bin")
+script = ("cp dist/whatismyip /bin")
 os.system(script)
 
 print("The whatismyip script was update in bin dir")

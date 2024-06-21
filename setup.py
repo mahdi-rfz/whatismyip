@@ -15,7 +15,7 @@ os.system("pyinstaller --onefile whatismyip")
 
 
 current_dir = input("Enter current directory :")
-script = ("cp whatismyip /bin")
+script = ("cp dist/whatismyip /bin")
 os.system(script)
 
 print("The whatismyip script was copied in bin dir")
