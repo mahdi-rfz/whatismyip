@@ -11,10 +11,9 @@ os.system("pip install requests")
 
 os.system("pip install colorama")
 
-os.system("pyinstaller --onefile whatismyip")
+os.system("pyinstaller --onefile whatismyip.py")
 
 
-current_dir = input("Enter current directory :")
 script = ("cp dist/whatismyip /bin")
 os.system(script)
 

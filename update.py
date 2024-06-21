@@ -11,7 +11,7 @@ before run this script , update whatismyip directory
 
 os.system("rm /bin/whatismyip")
 
-current_dir = input("Enter current directory :")
+
 script = ("cp dist/whatismyip /bin")
 os.system(script)
 
