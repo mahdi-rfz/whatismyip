@@ -2,3 +2,7 @@ __pycache__/
 venv/
 test.py
 whatismyip
+
+whatismyip.spec
+dist/
+build/
