@@ -16,9 +16,9 @@ def ip_receive():
     except OSError :
         return " Not found"
 
-def streetmap_link(latitude , longitude , zoom  = 15):
+def streetmap_link(latitude , longitude):
         base_url = "https://www.openstreetmap.org/"
-        link = f"{base_url}?mlat={latitude}&mlon={longitude}&zoom={zoom}"
+        link = f"{base_url}?mlat={latitude}&mlon={longitude}"
         return link
 
 data = ip_receive()
