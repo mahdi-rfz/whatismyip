@@ -15,8 +15,12 @@ def ip_receive():
     
     except OSError :
         return " Not found"
-    
-    
+
+def streetmap_link(latitude , longitude , zoom  = 15):
+        base_url = "https://www.openstreetmap.org/"
+        link = f"{base_url}?mlat={latitude}&mlon={longitude}&zoom={zoom}"
+        return link
+
 data = ip_receive()
     
 print(""" █   █ █▄█ ▄▀▄ ▀█▀ █ ▄▀▀ █▄ ▄█ ▀▄▀ █ █▀▄
@@ -27,3 +31,5 @@ print(Fore.LIGHTBLACK_EX + """    Ip :""" , Fore.WHITE + data["IPv4"])
 print(Fore.LIGHTBLACK_EX + """    Country code :""" , Fore.WHITE + data["country_name"])
 print(Fore.LIGHTBLACK_EX + """    Latitude :""" , Fore.WHITE + str(data["latitude"]))
 print(Fore.LIGHTBLACK_EX + """    Longitude :""" , Fore.WHITE + str(data["longitude"]))
+print(Fore.LIGHTBLACK_EX + """    OpenStreetMap Link :""" , Fore.WHITE + streetmap_link(data["latitude"] ,data["longitude"]))
+print()
