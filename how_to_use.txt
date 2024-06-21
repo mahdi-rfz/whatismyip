@@ -1,0 +1,34 @@
+
+ ________________________________________
+/ Hello, I am glad that you are using my \
+\ project .                              /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+use on linux , mac :
+	1 - install pyinstaller with "pip install pyinstaller"
+	2 - install requests and colorama with "pip install requests" and "pip install colorama"
+	3 - compile whatismyip.py with pyinstaller use "pyinstaller --onefile whatismyip"
+	4 - copy whatismyip/dist/whatismyip to /bin with "sudo cp dist/whatismyip /bin"
+	5 - type in your terminal whatismyip and enjoy it
+	
+	-------	now you can delete whatismyip directory----------
+
+	  or you can run setup.py file for manage all of this
+	
+	before use update.py update whatismyip directory with git pull or download directory
+
+use on windows :
+	1 - install auto-py-to-exe with pip install auto-py-to-exe
+	2 - install requests and colorama with "pip install requests" and "pip install colorama"
+	3 - compile whatismyip.py with auto-py-to-exe --> type in terminal "auto-py-to-exe"
+	4 - finde exe file and enjoy it
+
+	before use update.py update whatismyip directory with git pull or download directory
+
+-----------------------------------------------------------------------------------------------------------
+		if you dont want to compile whatismyip script install libs and run whatismyip.py
