@@ -1,35 +1,22 @@
 import requests
-from colorama import Fore
+
+URL = ("http://localhost:6263/whatismyip")
 
 
-def ip_receive():
-    try :
-        request_url = 'https://geolocation-db.com/jsonp/' 
-        response = requests.get(request_url)
-        response = response.text
-        response = response.replace("callback(" , "")
-        response = response.replace(")" , "")
-        response = response.replace("null" , "False")
-        
-        return eval(response)
+def checkInternteConnection():
+    r = requests.get("https://google.com")
+    return r.ok
+
+def receiveIp():
+    responce = requests.get(URL)
+    return (eval(responce.text)["ip"])
     
-    except OSError :
-        return " Not found"
-
-def streetmap_link(latitude , longitude):
-        base_url = "https://www.openstreetmap.org/"
-        link = f"{base_url}?mlat={latitude}&mlon={longitude}"
-        return link
-
-data = ip_receive()
-    
-print(""" █   █ █▄█ ▄▀▄ ▀█▀ █ ▄▀▀ █▄ ▄█ ▀▄▀ █ █▀▄
- ▀▄▀▄▀ █ █ █▀█  █  █ ▄██ █ ▀ █  █  █ █▀ 
+def artText():
+    return(""" █   █ █ █▄ ▄█ █ █▀▄
+ ▀▄▀▄▀ █ █ ▀ █ █ █▀ 
 """)
 
-print(Fore.LIGHTBLACK_EX + """    Ip :""" , Fore.WHITE + data["IPv4"])
-print(Fore.LIGHTBLACK_EX + """    Country code :""" , Fore.WHITE + data["country_name"])
-print(Fore.LIGHTBLACK_EX + """    Latitude :""" , Fore.WHITE + str(data["latitude"]))
-print(Fore.LIGHTBLACK_EX + """    Longitude :""" , Fore.WHITE + str(data["longitude"]))
-print(Fore.LIGHTBLACK_EX + """    OpenStreetMap :""" , Fore.WHITE + streetmap_link(data["latitude"] ,data["longitude"]))
-print()
+
+
+print(artText())
+print(f"IP : {receiveIp()}")
