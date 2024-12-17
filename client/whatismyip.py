@@ -190,6 +190,7 @@ class Tool:
 parser = argparse.ArgumentParser(description='whatIsMyIp')
 
 parser.add_argument("-i" , type = str , help = "input ip")
+parser.add_argument('-v', action='store_true', help='verbose')
 parser.add_argument("--set_url" , type = str , help = "set url")
 
 args = parser.parse_args()
@@ -228,6 +229,14 @@ if args.i != None :
     info = Tool.checkIpInfo(args.i)
     for i in info:
         print(f"{i} : {info[i]}")
+
+if args.v == True : 
+    print(Tool.artText())
+    info = Tool.checkIpInfo(SERVER_IP)
+    for i in info:
+        print(f"{i} : {info[i]}")
+
+
 else : 
     if Tool.checkServerStatus(SERVER_IP , SERVER_PORT) == False:
         print(Tool.artText())
