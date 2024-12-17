@@ -6,3 +6,4 @@ whatismyip
 whatismyip.spec
 dist/
 build/
+whatismyip-logfile.txt
