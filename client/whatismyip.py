@@ -232,7 +232,7 @@ if args.i != None :
 
 if args.v == True : 
     print(Tool.artText())
-    info = Tool.checkIpInfo(SERVER_IP)
+    info = Tool.checkIpInfo(Tool.receiveClientIp(SERVER_IP , SERVER_PORT))
     for i in info:
         print(f"{i} : {info[i]}")
 
