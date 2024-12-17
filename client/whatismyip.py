@@ -1,10 +1,18 @@
+#use requests for http request for receive ip and ip info function
 import requests
+#use socket for check internet connection and check server status
 import socket
+#use json for parse in parameters in ip receive function
 import json
+#use argparse for parse in inputs
 import argparse
+#use sys only for sys.exit()
 import sys
+#use sqlite for save host url on client
 import sqlite3
+#use getpass for find client username for save on system
 import getpass
+#use os to diagnose os 
 import os
 
 
@@ -19,6 +27,8 @@ class dbController:
 
     def checkSaver():
         if os.name == "nt":
+            #if os.name == "nt" the client os is windows
+
             try : 
                 os.mkdir(f"C:/Users/{getpass.getuser()}/whatismyip")
             except : 
@@ -143,6 +153,11 @@ class Tool:
 
 
     def splitUrlAndPort(url):
+        """
+        function work flow : 
+            input -> http://127.0.0.1:6263
+            output -> [127.0.0.1 , 6263]
+        """
         url = list(url)
         counter = 0 
         while True :
@@ -218,7 +233,7 @@ else :
         print(Tool.artText())
         print(f"HOST with ip : {SERVER_IP} & port : {SERVER_PORT} is down")
         sys.exit()
-        
+
     print(Tool.artText())
     ip = (Tool.receiveClientIp(SERVER_IP , SERVER_PORT))
     print(f"IP : {ip}")
