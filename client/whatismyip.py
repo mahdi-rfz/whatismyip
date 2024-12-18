@@ -230,7 +230,7 @@ if args.i != None :
     for i in info:
         print(f"{i} : {info[i]}")
 
-if args.v == True : 
+elif args.v == True : 
     print(Tool.artText())
     info = Tool.checkIpInfo(Tool.receiveClientIp(SERVER_IP , SERVER_PORT))
     for i in info:
