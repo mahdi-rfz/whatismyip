@@ -1,0 +1,2 @@
+add web view for display ip & info
+add loger for client
