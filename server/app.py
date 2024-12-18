@@ -16,7 +16,7 @@ def checkIpInfo(clientIp):
 
 app = Flask(__name__)
 
-@app.route("/whatismyip/cli" , methods = ["GET" , "POST"])
+@app.route("/whatismyip" , methods = ["GET" , "POST"])
 def whatIsMyIp():
     loger.loger(request.remote_addr , request.user_agent , request.base_url)
     return jsonify({"ip":request.remote_addr})
