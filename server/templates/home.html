@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatismyip</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1db954;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .info-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .info-item span {
+            font-weight: bold;
+            color: #1db954;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        footer a:first-of-type {
+            color: #c5c5c5;
+        }
+
+        footer a:last-of-type {
+            color: #1db954;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .info-card {
+                padding: 30px;
+                max-width: 400px;
+            }
+
+            .info-item {
+                font-size: 1.2rem;
+            }
+
+            footer {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-card {
+                padding: 10px;
+            }
+
+            .info-item {
+                font-size: 0.9rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Information</h1>
+    <div class="info-card">
+        <div class="info-item">
+            <span>IP Address:</span> <span id="ip">{{ip}}</span>
+        </div>
+        <div class="info-item">
+            <span>Country:</span> <span id="location">{{country}}</span>
+        </div>
+        <div class="info-item">
+            <span>City:</span> <span id="isp">{{city}}</span>
+        </div>
+        <div class="info-item">
+            <span>ISP:</span> <span id="browser">{{isp}}</span>
+        </div>
+    </div>
+    <footer>
+        Made with ❤️ By <a href="https://github.com/mahdi-rfz">mahdi-rfz</a> | <a href="https://github.com/mahdi-rfz/whatismyip">Learn More</a>
+    </footer>
+</body>
+</html>
