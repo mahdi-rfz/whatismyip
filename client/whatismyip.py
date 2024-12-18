@@ -226,7 +226,7 @@ if Tool.checkInternetConnection() == False :
 
 if args.i != None : 
     print(Tool.artText())
-    info = Tool.checkIpInfo(args.i)
+    info = Tool.checkIpInfo((args.i).strip())
     for i in info:
         print(f"{i} : {info[i]}")
 
