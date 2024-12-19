@@ -22,7 +22,7 @@ def whatIsMyIp():
     return jsonify({"ip":request.remote_addr})
 
 
-@app.route("/whatismyip/returnip" , methods = ["GET"])
+@app.route("/" , methods = ["GET"])
 def whatismyip():
     loger.loger(request.remote_addr , request.user_agent , request.base_url)
 
@@ -34,4 +34,4 @@ def whatismyip():
 
 
 if (__name__) == ("__main__"):
-    app.run(host = socket.gethostbyname(socket.gethostname()) , port = 6263)
+    app.run(host = socket.gethostbyname(socket.gethostname()) , port = 80)
